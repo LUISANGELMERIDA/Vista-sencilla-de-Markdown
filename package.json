@@ -1,0 +1,12 @@
+{
+  "name": "vista-sencilla-de-markdown",
+  "version": "1.0.0",
+  "description": "este repositorio va a mostrar una vista sencilla de React-markdown",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
