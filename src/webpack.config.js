@@ -8,4 +8,14 @@ module.exports ={
         publicPath: ""
     },
     mode: "production",
+    modules:{
+        rules:[
+          {
+            use:"babel-loader",
+            test:/.(js jsx)$/,
+            exclude:/node_modules/
+          }
+        ]
+    }
+
 }
