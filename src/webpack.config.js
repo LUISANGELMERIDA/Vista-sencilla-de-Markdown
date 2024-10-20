@@ -4,7 +4,7 @@ module.exports ={
     entry:"./src/index.js",
     output: {
         path:path.resolve(__dirname, "dist"),
-        name: "[name].[contenthash].js",
+        filename: "[name].[contenthash].js",
         publicPath: ""
     },
     mode: "production",
@@ -14,8 +14,11 @@ module.exports ={
             use:"babel-loader",
             test:/.(js jsx)$/,
             exclude:/node_modules/
-          }
-        ]
+          },
+        ],
+    },
+    resolve: {
+        extensions: [".js","jsx","json"]
     }
 
-}
+};
