@@ -1,4 +1,4 @@
-const resolve = require("path");
+const path = require("path");
 /**@type {import("webpack").configuration} */
 module.exports ={
     entry:"./src/index.js",
@@ -6,9 +6,9 @@ module.exports ={
         path:path.resolve(__dirname, "dist"),
         filename: "[name].[contenthash].js",
         publicPath: ""
-    },
+    },   
     mode: "production",
-    modules:{
+    module:{
         rules:[
           {
             use:"babel-loader",
@@ -18,7 +18,7 @@ module.exports ={
         ],
     },
     resolve: {
-        extensions: [".js","jsx","json"]
+        extensions: [".js",".jsx",".json"]
     }
 
 };
