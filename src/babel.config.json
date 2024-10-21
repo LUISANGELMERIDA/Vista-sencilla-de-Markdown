@@ -2,8 +2,8 @@
     "presets": [
         ["@babel/preset-env",
        {
-        "corejs":3.38,
-        "useBuilIns":"usage"
+        "core-js": "^3.38.1",
+        "useBuiltIns":"usage"
        }
        ],
        ["@babel/preset-react",{
