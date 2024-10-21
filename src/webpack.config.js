@@ -7,21 +7,25 @@ const webpack = require('webpack'); //to access built-in plugins
 module.exports ={
     mode: "production",
     entry:"./src/index.js",
-    output: {
-        path:path.resolve(__dirname, "dist"),
+    output: {        
         filename: "[name].[contenthash].js",
+        path: path.resolve(__dirname, "dist"),        
         publicPath: ""
     },   
     
     module:{
         rules:[
           {
+            
+            test: /\.m?js$/, use: 'raw-loader' ,
+            exclude:/node_modules/,
             use:"babel-loader",
-            test: /\.txt$/, use: 'raw-loader' ,
-            exclude:/node_modules/
-          },
+            options:{
+                presets: ["@babel/preset-env","@babel/preset-react"]
+            }
+          }
           
-        ],
+        ]
     },
     resolve: {
         extensions: [".js",".jsx",".json"]

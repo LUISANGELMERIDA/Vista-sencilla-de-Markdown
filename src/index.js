@@ -1,5 +1,4 @@
+import React from "react";
 import ReactDOM from "react-dom";
 
-import App from "./App";
-
-ReactDOM.render(<App />, document.getElementById("id"));
+ReactDOM.render(<h1>Vista sencilla de markdown</h1>,document.getElementById("root"));
