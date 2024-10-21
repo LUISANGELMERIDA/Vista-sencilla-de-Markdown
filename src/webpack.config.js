@@ -1,5 +1,8 @@
 const path = require("path");
-/**@type {import("webpack").configuration} */
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack'); //to access built-in plugins
+
+/**@type {import("webpack").Configuration} */
 module.exports ={
     entry:"./src/index.js",
     output: {
@@ -12,13 +15,22 @@ module.exports ={
         rules:[
           {
             use:"babel-loader",
-            test:/.(js|jsx)$/,
+            test: /\.txt$/, use: 'raw-loader' ,
             exclude:/node_modules/
           },
+          
         ],
     },
     resolve: {
         extensions: [".js",".jsx",".json"]
-    }
+    },
+    plugins: [
+        new CleanWebpackPlugin(),
+        new HtmlWebpackPlugin({
+            template:"./public/index.html",
+        }),
+    ],
 
 };
+
+
