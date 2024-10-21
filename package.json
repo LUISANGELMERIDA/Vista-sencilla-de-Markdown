@@ -3,13 +3,14 @@
   "version": "1.0.0",
   "description": "este repositorio va a mostrar una vista sencilla de React-markdown",
   "main": "index.js",
-  "scripts": {
-    "build": "webpack"
+  "scripts": {    
+  "build": "webpack --config prod.config.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "lodash": "^4.17.21",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },

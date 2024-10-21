@@ -2,15 +2,17 @@ const path = require("path");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack'); //to access built-in plugins
 
+
 /**@type {import("webpack").Configuration} */
 module.exports ={
+    mode: "production",
     entry:"./src/index.js",
     output: {
         path:path.resolve(__dirname, "dist"),
         filename: "[name].[contenthash].js",
         publicPath: ""
     },   
-    mode: "production",
+    
     module:{
         rules:[
           {
